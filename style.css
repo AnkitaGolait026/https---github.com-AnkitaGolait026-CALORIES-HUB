@@ -1,0 +1,519 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 1000;
+  padding: 15px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.logo span {
+  color: #ff6347;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+/* Slider */
+.slider {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  margin-top: 70px;
+}
+
+.slides {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: relative;
+  flex: 0 0 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider-img {
+  filter: brightness(50%) blur(1px);
+}
+
+.caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+}
+
+.caption h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.caption p {
+  font-size: 22px;
+  margin-bottom: 25px;
+}
+
+.btn {
+  background-color: #ff6347;
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: #e5533d;
+}
+
+/* Navigation Buttons */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 50%;
+}
+
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+}
+
+/* Calories Info Section */
+.calories-info {
+  padding: 80px 50px;
+  background: #f8f8f8;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.content img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.text {
+  flex: 1;
+}
+
+.text h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.text p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* Services Section */
+.services {
+  padding: 80px 50px;
+  background: white;
+  text-align: center;
+}
+
+.services h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+
+.service-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #f0f0f0;
+  padding: 30px 20px;
+  border-radius: 10px;
+  width: 300px;
+}
+
+.card h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.card p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.dark-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #333;
+  color: white;
+  border: none;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+body.dark-mode .navbar,
+body.dark-mode .services,
+body.dark-mode .calories-info,
+body.dark-mode .card {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+body.dark-mode .btn {
+  background-color: #ff7f50;
+}
+
+/* Recipe Cards */
+.recipe-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.card {
+  width: 300px;
+  border-radius: 15px;
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: 200px; /* Adjust height as per your requirement */
+  object-fit: cover; /* Ensure the image covers the space without stretching */
+  border-radius: 10px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff6347;
+  color: #fff;
+  border-radius: 25px;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.bookmark {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 22px;
+  cursor: pointer;
+  color: #ccc;
+}
+
+.bookmark.active {
+  color: red;
+}
+
+/* Recipe Info Page */
+.recipe-info-header {
+  text-align: center;
+  padding: 50px 20px 30px;
+  background: #fff8f0;
+  margin-top: 50px;
+}
+
+.recipe-info-header h2 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.recipe-info-header p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+#recipe-search {
+  padding: 12px 20px;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  outline: none;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+/* Search Bar */
+.search-container input {
+  width: 60%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+/* //recipe page */
+/* new page kaa */
+ /* .single-recipe {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  color: white; /* text white karo agar bg dark hai */
+ /* }  */
+ .single-recipe {
+  max-width: 800px;
+  margin: 80px auto;
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.85); /* White with opacity */
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.single-recipe img {
+  max-width: 100%;
+  height: auto;
+  margin: 20px 0;
+  border-radius: 10px;
+}
+
+
+
+
+
+/* Back Button */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 16px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #ff7043;
+  border-radius: 30px;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #e64a19;
+}
+
+
+/* Headings */
+.single-recipe h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.single-recipe h2 {
+  font-size: 26px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+/* Image styling */
+.single-recipe img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Lists */
+.single-recipe ul,
+.single-recipe ol {
+  text-align: left;
+  margin: 0 auto 20px;
+  padding-left: 20px;
+  max-width: 600px;
+  color: #555;
+  font-size: 17px;
+}
+
+/* Back button */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 16px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #ff7043;
+  border-radius: 30px;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #e64a19;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('https://media.istockphoto.com/id/1277967294/photo/close-up-image-of-glass-bowls-containing-gajar-ka-halwa-sweet-indian-dessert-pudding-bowl-of.webp?a=1&b=1&s=612x612&w=0&k=20&c=QmCD4jwe0CYOEM07jLtMNzvlpJ3ialDE8YTzC7pU5XY='); /* image path sahi do */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  position: relative;
+  font-family: 'Arial', sans-serif;
+}
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: inherit;
+  filter: blur(8px);
+  z-index: -1;
+}
+
+/* Style for Search Bar Container */
+/* .search-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 15px;
+  border-radius: 5px;
+  display: none; /* Initially hidden */
+  /* z-index: 1000;
+} */
+
+/* #searchBar {
+  padding: 10px;
+  font-size: 16px;
+  width: 300px;
+  border: none;
+  border-radius: 5px;
+} */
+
+/* Style for Caption Text */
+/* .caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+} */ 
+
+/* Style for Search Bar Container */
+.search-container {
+  position: absolute;
+  top: 100%; /* Position it just below the button */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 15px;
+  border-radius: 5px;
+  display: none; /* Initially hidden */
+  z-index: 1000;
+}
+
+#searchBar {
+  padding: 10px;
+  font-size: 16px;
+  width: 300px;
+  border: none;
+  border-radius: 5px;
+}
+
+/* Style for Caption Text */
+.caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+

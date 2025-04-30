@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calorie Hub</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+  <!-- Navbar -->
+  <button class="dark-toggle" onclick="toggleDarkMode()">🌙</button>
+  <nav class="navbar">
+    <div class="logo">calorie <span>HUB</span></div>
+    <ul class="nav-links">
+      <li><a href="#">Calories</a></li>
+      <li><a href="#">Recipe</a></li>
+    </ul>
+  </nav>
+   <!-- Search Bar -->
+
+  <!-- Hero Section with Slider -->
+  <section class="slider">
+    <!-- <div class="filter-container">
+      <button onclick="filterRecipes('all')">All</button>
+      <button onclick="filterRecipes('breakfast')">Breakfast</button>
+      <button onclick="filterRecipes('lunch')">Lunch</button>
+      <button onclick="filterRecipes('vegan')">Vegan</button>
+    </div> -->
+    
+
+           
+    <div class="slides">
+      <div class="slide active">
+        <img class="slider-img" src="https://media.istockphoto.com/id/1147252758/photo/healthy-vegetarian-food-background-vegetables-pesto-and-lentil-curry-with-tofu.webp?a=1&b=1&s=612x612&w=0&k=20&c=hNf6d-B7WT8WpUq1O9z-S5JNW4T8NB9Jj3KavSJCkP0=" alt="Food Image 1">
+        <div class="caption">
+          <h1>CHECK CALORIES LET'S GO</h1>
+          <p>Find out how many calories are entering your body.</p>
+          <!-- <a href="#" class="btn">Start Here</a> -->
+          <a href="#" class="btn" id="startBtn">Start Here</a>
+
+        </div>
+
+        <div class="search-container" id="searchContainer" style="display: none;">
+          <input type="text" id="searchBar" placeholder="Search for a recipe...">
+        </div>
+        
+        
+      </div>
+      <div class="slide"id="healthyEating">
+        <img class="slider-img" src="https://media.istockphoto.com/id/1829241109/photo/enjoying-a-brunch-together.webp?a=1&b=1&s=612x612&w=0&k=20&c=PDAOJZowRgcFpLORXCV5p9Yt4wuOlxpYkxOUk5M4koo=" alt="Food Image 2">
+        <div class="caption">
+          <h1>HEALTHY EATING</h1>
+          <p>Eat better, live better with Calorie Hub</p>
+          <a href="#" class="btn">Explore Now</a>
+        </div>
+      </div>
+    </div>
+    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="next" onclick="moveSlide(1)">&#10095;</button>
+  </section>
+
+  <!-- What are calories Section -->
+  <section class="calories-info">
+    <div class="content">
+      <img src="https://media.istockphoto.com/id/531306158/photo/breakfast-feast.webp?a=1&b=1&s=612x612&w=0&k=20&c=Ty37CtaRFb7L3E8wM3QoSwCtKYpxf1pOpXIIwh5lVqA=" alt="Calories Food">
+      <div class="text">
+        <h2>What are calories?</h2>
+        <p>Calories are a value or unit that shows how much energy can be obtained from food and drinks. It is important to meet your calorie needs every day for active living.</p>
+        <a href="#" class="btn">View Calories</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Services Section -->
+  <section class="services">
+    <h2>Our Services</h2>
+    <p class="subtitle">Calorie Hub is a platform promoting healthy living. Here are our services:</p>
+    <div class="service-cards">
+      <div class="card">
+        <h3>Top Quality</h3>
+        <p>We ensure the recipes are of highest quality with a verified team.</p>
+        <a href="#" class="btn">View Calories</a>
+      </div>
+      <div class="card">
+        <h3>Accurate Information</h3>
+        <p>All information is sourced from trusted nutrition websites and is correct.</p>
+        <a href="#" class="btn">View Calories</a>
+      </div>
+      <div class="card">
+        <h3>Customer Service</h3>
+        <p>Available from 10AM to 5PM daily for customer support and help.</p>
+        <a href="search-container" class="btn">View Calories</a>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="recipe-info-header">
+    <h2>🍽️ Daily Food Calories</h2>
+    <p>Find out how many calories are in your food.<br>
+       Simply enter the name of the food in the input below.</p>
+    <input type="text" id="recipe-search" placeholder="Search food...">
+  </section>
+  
+
+  <div class="recipe-container">
+
+    <!-- Recipe 1 -->
+
+  
+      
+  
+
+    <div class="card breakfast">
+      <span class="bookmark" onclick="toggleBookmark(this)">♡</span>
+      <img src="https://media.istockphoto.com/id/665182604/photo/bowl-of-oat-granola-with-yogurt-fresh-raspberries-blueberries.webp?a=1&b=1&s=612x612&w=0&k=20&c=EpEkKe80SR56eoHUrZgeiIpYJbr3doxsFdHm8n6_zgI=" alt="Oats & Fruits Bowl" alt="">
+      <h3>Oats & Fruits Bowl</h3>
+      <p>Healthy fiber-rich morning breakfast with seasonal fruits and oats.</p>
+      <div class="rating">★★★★☆</div>
+      <!-- <a href="#" class="btn">View Recipe</a> -->
+      <a href="recipe1.html" class="btn">View Recipe</a>
+    </div>
+  
+    <!-- Recipe 2 -->
+    <div class="card lunch vegan">
+      <span class="bookmark" onclick="toggleBookmark(this)">♡</span>
+      <img src="https://media.istockphoto.com/id/1425572827/photo/bean-sprouts-salad-on-rustic-table.webp?a=1&b=1&s=612x612&w=0&k=20&c=MnrlHM5lEir09p0Hku4F6Llyd2iMsiSjl1lQjvyvz7w=" alt="">
+      <h3>Vegan Chickpea Salad</h3>
+      <p>Fresh salad made with chickpeas, herbs, lemon & olive oil.</p>
+      <div class="rating">★★★☆☆</div>
+      <a href="recipe2.html" class="btn">View Recipe</a>
+    </div>
+  
+    <!-- Recipe 3 -->
+    <div class="card lunch">
+      <span class="bookmark" onclick="toggleBookmark(this)">♡</span>
+      <img src="https://media.istockphoto.com/id/1665320059/photo/indian-paneer-butter-masala-directly-above-photo-on-white-background.webp?a=1&b=1&s=612x612&w=0&k=20&c=SUResIg0QTtf-m2zfXj4ZMO9IJlXwYKX1JZEvr5yvP8=" alt="">
+      <h3>Paneer Butter Masala</h3>
+      <p>Rich creamy paneer curry served best with naan or rice.</p>
+      <div class="rating">★★★★★</div>
+      <a href="recipe3.html" class="btn">View Recipe</a>
+    </div>
+  
+    <!-- Recipe 4 -->
+    <div class="card breakfast">
+      <span class="bookmark" onclick="toggleBookmark(this)">♡</span>
+      <img src="https://media.istockphoto.com/id/1093261264/photo/aloo-kanda-poha-or-tarri-pohe-with-spicy-chana-masala-curry-selective-focus.webp?a=1&b=1&s=612x612&w=0&k=20&c=cGs-JADB3TeV2If6yx7YNp7OoAFkcrQHlZkVKInTBPc=" alt="">
+      <h3>Poha</h3>
+      <p>Traditional Indian flattened rice recipe with peanuts and spices.</p>
+      <div class="rating">★★★★☆</div>
+      <a href="recipe4.html" class="btn">View Recipe</a>
+    </div>
+  
+    <!-- Recipe 5 -->
+    <div class="card vegan">
+      <span class="bookmark" onclick="toggleBookmark(this)">♡</span>
+     <img src="https://media.istockphoto.com/id/1339622671/photo/vegetable-skewers.webp?a=1&b=1&s=612x612&w=0&k=20&c=KAhr5THvU_eQHSODCgi73H9CzdTGy_Ov7Row5Qnk4zM=" alt="">
+      <h3>Grilled Tofu Skewers</h3>
+      <p>Delicious grilled tofu with bell peppers & herbs for a protein punch.</p>
+      <div class="rating">★★★☆☆</div>
+      <a href="recipe5.html" class="btn">View Recipe</a>
+    </div>
+  
+    <!-- Recipe 6 -->
+    <div class="card lunch">
+      <span class="bookmark" onclick="toggleBookmark(this)">♡</span>
+      <img src="https://media.istockphoto.com/id/669635320/photo/kidney-bean-curry-or-rajma-or-rajmah-chawal-and-roti-typical-north-indian-main-course.webp?a=1&b=1&s=612x612&w=0&k=20&c=fQvk0ylYuRflBkPZ8aTUHwtcNkdeNqofVH9VjT4C2a0=" alt="">
+      <h3>Rajma Chawal</h3>
+      <p>Classic kidney bean curry served with steamed rice.</p>
+      <div class="rating">★★★★★</div>
+      <a href="recipe6.html" class="btn">View Recipe</a>
+    </div>
+  
+  </div>
+  
+
+
+
+<script src="script.js"></script>
+</body>
+</html>
